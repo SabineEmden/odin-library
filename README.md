@@ -1,8 +1,8 @@
-# The Odin Project - [Project title] solution
+# The Odin Project - Library solution
 
-This is a solution to [Project: [Title] for The Odin Project](). The Odin Project provides a free open-source coding curriculum that can be taken entirely online.
+This is a solution to [Project: Library for The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). The Odin Project provides a free open-source coding curriculum that can be taken entirely online.
 
-Project: [Title] is the [x] of [y] projects in the [[Title] Course](). It provides an opportunity to practice [topic].
+Project: Library is the first of twelve projects in the [JavaScript Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript). It provides an opportunity to gain practice with objects and object constructors.
 
 ## Table of contents
 
@@ -18,15 +18,16 @@ Project: [Title] is the [x] of [y] projects in the [[Title] Course](). It provid
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
 
 Users should be able to:
 
--
+- See the books in the library
+- Add a new book to the library
+- Remove a book from the library
+- Toggle a book's status between "not read yet" and "read"
 
 ### Screenshot
 
@@ -42,8 +43,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [GitHub repository](https://github.com/SabineEmden/odin-admin-dashboard)
+- [Live Site](https://sabineemden.github.io/odin-library/)
 
 ## My process
 
