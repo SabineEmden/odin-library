@@ -1,8 +1,10 @@
+const myLibrary = [];
+
 function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+  this.title = title; // string
+  this.author = author; // string
+  this.pages = pages; // number
+  this.read = read; // boolean
 }
 
 Book.prototype.print = function () {
@@ -11,6 +13,18 @@ Book.prototype.print = function () {
   return `${this.title} by ${this.author}, ${this.pages} pages, ${status}`;
 };
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+function addBookToLibrary(title, author, pages, read) {
+  let book = new Book(title, author, pages, read);
+  myLibrary.push(book);
+}
 
-console.log(theHobbit.print());
+addBookToLibrary("When Women Were Dragons", "Kelly Barnhill", 367, true);
+addBookToLibrary("My Tender Matador", "Pedro Lemebel", 170, true);
+addBookToLibrary("Our Share of Night", "Mariana Enriquez", 588, false);
+addBookToLibrary("Cantoras", "Carolin De Robertis", 317, false);
+
+console.log(myLibrary.length);
+
+for (let book of myLibrary) {
+  console.log(book.print());
+}
