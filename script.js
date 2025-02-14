@@ -23,8 +23,19 @@ addBookToLibrary("My Tender Matador", "Pedro Lemebel", 170, true);
 addBookToLibrary("Our Share of Night", "Mariana Enriquez", 588, false);
 addBookToLibrary("Cantoras", "Carolin De Robertis", 317, false);
 
-console.log(myLibrary.length);
+const container = document.querySelector("#container");
+
+const placeholder = document.createElement("p");
+placeholder.classList.add("placeholder");
+placeholder.textContent = "There are no books in the library.";
+
+container.appendChild(placeholder);
+
+const booklist = document.createElement("ul");
+booklist.classList.add("booklist");
 
 for (let book of myLibrary) {
-  console.log(book.print());
+  const listItem = document.createElement("li");
+  listItem.textContent = book.print();
+  container.appendChild(listItem);
 }
