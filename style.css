@@ -69,6 +69,7 @@ h6 {
 :root {
   --yellow: rgb(244, 208, 78);
   --gray-950: rgb(17, 17, 17);
+  --gray-500: rgb(107, 107, 107);
   --white: rgb(255, 255, 255);
 }
 
@@ -89,6 +90,18 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 12px 0;
 }
 
 .content-wrapper {
