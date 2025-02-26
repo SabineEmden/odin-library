@@ -56,6 +56,45 @@ h6 {
   text-wrap: balance;
 }
 
+/* General content styles and layout */
+@font-face {
+  font-family: "Figtree";
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+  src: url(./assets/fonts/Figtree-VariableFont_wght.woff2)
+    format("woff2-variations");
+}
+
+:root {
+  --yellow: rgb(244, 208, 78);
+  --gray-950: rgb(17, 17, 17);
+  --white: rgb(255, 255, 255);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.875rem; /*  0.875rem => 0.875 * 16px = 14px */
+  font-weight: 500;
+  color: var(--gray-950);
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 24px;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.content-wrapper {
+  width: 65rem;
+}
+
 /* Footer */
 .attribution {
   font-size: 0.75rem; /* 0.75 * 16px = 12px */
