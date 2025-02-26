@@ -56,7 +56,7 @@ h6 {
   text-wrap: balance;
 }
 
-/* General content styles and layout */
+/* General styles and layout */
 @font-face {
   font-family: "Figtree";
   font-weight: 300 900;
@@ -74,7 +74,7 @@ h6 {
 
 body {
   font-family: "Figtree", sans-serif;
-  font-size: 0.875rem; /*  0.875rem => 0.875 * 16px = 14px */
+  font-size: 0.85rem; /*  0.875rem => 0.875 * 16px = 14px */
   font-weight: 500;
   color: var(--gray-950);
   background-color: var(--yellow);
@@ -93,6 +93,27 @@ main {
 
 .content-wrapper {
   width: 65rem;
+}
+
+/* Book list */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  height: 100%;
+  border: 1px solid var(--gray-950);
+  border-radius: 20px;
+  box-shadow: 8px 8px var(--gray-950);
+  padding: 24px;
 }
 
 /* Footer */

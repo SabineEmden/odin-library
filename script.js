@@ -38,6 +38,7 @@ function createBookList(library) {
   bookList.classList.add("book-list");
   for (let book of library) {
     let listItem = document.createElement("li");
+    listItem.classList.add("list-item");
     listItem.textContent = book.display();
     bookList.appendChild(listItem);
   }
