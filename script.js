@@ -12,6 +12,7 @@ function Book(title, author, pages, read) {
 Book.prototype.display = function () {
   let status = "not read yet";
   if (this.read) status = "read";
+
   return `${this.title} by ${this.author}, ${this.pages} pages, ${status}`;
 };
 
@@ -39,7 +40,27 @@ function createBookList(library) {
   for (let book of library) {
     let listItem = document.createElement("li");
     listItem.classList.add("list-item");
-    listItem.textContent = book.display();
+
+    let title = document.createElement("h2");
+    title.classList.add("book-title");
+    title.textContent = `${book.title}`;
+    listItem.appendChild(title);
+
+    let author = document.createElement("p");
+    author.classList.add("book-author");
+    author.textContent = `by ${book.author}`;
+    listItem.appendChild(author);
+
+    let pages = document.createElement("p");
+    pages.classList.add("book-pages");
+    pages.textContent = `${book.pages} pages`;
+    listItem.appendChild(pages);
+
+    let status = document.createElement("p");
+    status.classList.add("book-status");
+    status.textContent = `${book.read ? "read" : "not read yet"}`;
+    listItem.appendChild(status);
+
     bookList.appendChild(listItem);
   }
   return bookList;
