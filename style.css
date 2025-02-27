@@ -108,8 +108,8 @@ h2 {
   width: 65rem;
 }
 
-/* Book list */
-.book-list {
+/* Booklist */
+.booklist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 20px;
@@ -118,7 +118,7 @@ h2 {
   padding: 0;
 }
 
-.list-item {
+.book__card {
   display: flex;
   flex-direction: column;
   background-color: var(--white);

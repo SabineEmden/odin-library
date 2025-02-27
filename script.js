@@ -34,34 +34,38 @@ const placeholder = document.createElement("p");
 placeholder.classList.add("placeholder");
 placeholder.textContent = "There are no books in the library.";
 
+function createBookCard(book) {
+  let listItem = document.createElement("li");
+  listItem.classList.add("book__card");
+
+  let title = document.createElement("h2");
+  title.classList.add("book__title");
+  title.textContent = `${book.title}`;
+  listItem.appendChild(title);
+
+  let author = document.createElement("p");
+  author.classList.add("book__author");
+  author.textContent = `by ${book.author}`;
+  listItem.appendChild(author);
+
+  let pages = document.createElement("p");
+  pages.classList.add("book__pages");
+  pages.textContent = `${book.pages} pages`;
+  listItem.appendChild(pages);
+
+  let status = document.createElement("p");
+  status.classList.add("book__status");
+  status.textContent = `${book.read ? "read" : "not read yet"}`;
+  listItem.appendChild(status);
+
+  return listItem;
+}
+
 function createBookList(library) {
   let bookList = document.createElement("ul");
-  bookList.classList.add("book-list");
+  bookList.classList.add("booklist");
   for (let book of library) {
-    let listItem = document.createElement("li");
-    listItem.classList.add("list-item");
-
-    let title = document.createElement("h2");
-    title.classList.add("book-title");
-    title.textContent = `${book.title}`;
-    listItem.appendChild(title);
-
-    let author = document.createElement("p");
-    author.classList.add("book-author");
-    author.textContent = `by ${book.author}`;
-    listItem.appendChild(author);
-
-    let pages = document.createElement("p");
-    pages.classList.add("book-pages");
-    pages.textContent = `${book.pages} pages`;
-    listItem.appendChild(pages);
-
-    let status = document.createElement("p");
-    status.classList.add("book-status");
-    status.textContent = `${book.read ? "read" : "not read yet"}`;
-    listItem.appendChild(status);
-
-    bookList.appendChild(listItem);
+    bookList.appendChild(createBookCard(book));
   }
   return bookList;
 }
