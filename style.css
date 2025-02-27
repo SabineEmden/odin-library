@@ -95,13 +95,7 @@ main {
 h1 {
   font-size: 2rem;
   font-weight: 800;
-  margin: 16px 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin: 12px 0;
+  margin-bottom: 16px;
 }
 
 .content-wrapper {
@@ -111,7 +105,7 @@ h2 {
 /* Booklist */
 .booklist {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 20px;
   align-items: stretch;
   list-style: none;
@@ -127,6 +121,26 @@ h2 {
   border-radius: 20px;
   box-shadow: 8px 8px var(--gray-950);
   padding: 24px;
+}
+
+.book__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.book__author {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.book__pages {
+  margin-bottom: 20px;
+}
+
+.book__status {
+  margin-top: auto;
 }
 
 /* Footer */
