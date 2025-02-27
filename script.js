@@ -9,13 +9,6 @@ function Book(title, author, pages, read) {
   this.read = read; // boolean
 }
 
-Book.prototype.display = function () {
-  let status = "not read yet";
-  if (this.read) status = "read";
-
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${status}`;
-};
-
 function addBookToLibrary(title, author, pages, read) {
   let book = new Book(title, author, pages, read);
   myLibrary.push(book);
@@ -55,7 +48,7 @@ function createBookCard(book) {
 
   let status = document.createElement("p");
   status.classList.add("book__status");
-  status.textContent = `${book.read ? "read" : "not read yet"}`;
+  status.textContent = `${book.read ? "Read" : "Not read yet"}`;
   listItem.appendChild(status);
 
   return listItem;
