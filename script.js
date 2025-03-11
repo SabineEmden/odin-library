@@ -1,4 +1,4 @@
-// SET UP LIBRARY
+// Set up library
 
 const myLibrary = [];
 
@@ -19,7 +19,7 @@ addBookToLibrary("My Tender Matador", "Pedro Lemebel", 170, true);
 addBookToLibrary("Our Share of Night", "Mariana Enriquez", 588, false);
 addBookToLibrary("Cantoras", "Carolin De Robertis", 317, false);
 
-// DISPLAY BOOKS ON PAGE
+// Display books on page
 
 const container = document.querySelector("#container");
 
@@ -72,3 +72,14 @@ function displayLibrary() {
 }
 
 displayLibrary();
+
+// Add book to library
+
+const dialog = document.getElementById("dialog");
+const modal = document.getElementById("modal");
+
+modal.addEventListener("click", () => dialog.showModal());
+
+const closeButton = document.getElementById("closeBtn");
+
+closeButton.addEventListener("click", () => dialog.close());
