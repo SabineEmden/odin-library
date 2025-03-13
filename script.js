@@ -80,6 +80,20 @@ const modal = document.getElementById("modal");
 
 modal.addEventListener("click", () => dialog.showModal());
 
-const closeButton = document.getElementById("closeBtn");
+const form = document.getElementById("bookForm");
+const log = document.querySelector("#log");
 
-closeButton.addEventListener("click", () => dialog.close());
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let title = form.elements["title"].value;
+  let author = form.elements["author"].value;
+  let pages = form.elements["pages"].value;
+  let read = form.elements["status"].value === "yes" ? true : false;
+
+  addBookToLibrary(title, author, pages, read);
+  displayLibrary();
+
+  form.reset();
+  dialog.close();
+});
