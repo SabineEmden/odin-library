@@ -12,6 +12,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
   let book = new Book(title, author, pages, read);
   myLibrary.push(book);
+  return book;
 }
 
 addBookToLibrary("When Women Were Dragons", "Kelly Barnhill", 367, true);
@@ -56,7 +57,7 @@ function createBookCard(book) {
 
 function createBookList(library) {
   let bookList = document.createElement("ul");
-  bookList.classList.add("booklist");
+  bookList.classList.add("book-list");
   for (let book of library) {
     bookList.appendChild(createBookCard(book));
   }
@@ -90,8 +91,14 @@ form.addEventListener("submit", (event) => {
   let pages = form.elements["pages"].value || "Unknown number of ";
   let read = form.elements["status"].value === "yes" ? true : false;
 
-  addBookToLibrary(title, author, pages, read);
-  displayLibrary();
+  let newBook = addBookToLibrary(title, author, pages, read);
+
+  if (myLibrary.length === 1) {
+    displayLibrary();
+  } else {
+    const bookList = document.querySelector("ul.book-list");
+    bookList.appendChild(createBookCard(newBook));
+  }
 
   form.reset();
   dialog.close();
