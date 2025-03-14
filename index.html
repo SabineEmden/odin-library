@@ -15,7 +15,7 @@
           <form id="bookForm">
             <div>
               <label for="title">Title:</label>
-              <input type="text" name="title" id="title" />
+              <input type="text" name="title" id="title" required />
             </div>
             <div>
               <label for="author">Author</label>
@@ -34,13 +34,13 @@
             </fieldset>
             <div>
               <button type="submit">Submit</button>
-              <button>Cancel</button>
+              <button type="button" id="cancelBtn">Cancel</button>
             </div>
           </form>
         </dialog>
         <button id="modal">Add book</button>
         <div id="container">
-          <!-- Book list -->
+          <!-- Book list goes here-->
         </div>
       </div>
     </main>

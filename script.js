@@ -65,9 +65,9 @@ function createBookList(library) {
 
 function displayLibrary() {
   if (myLibrary.length === 0) {
-    container.appendChild(placeholder);
+    container.replaceChildren(placeholder);
   } else {
-    container.appendChild(createBookList(myLibrary));
+    container.replaceChildren(createBookList(myLibrary));
   }
 }
 
@@ -81,19 +81,25 @@ const modal = document.getElementById("modal");
 modal.addEventListener("click", () => dialog.showModal());
 
 const form = document.getElementById("bookForm");
-const log = document.querySelector("#log");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   let title = form.elements["title"].value;
-  let author = form.elements["author"].value;
-  let pages = form.elements["pages"].value;
+  let author = form.elements["author"].value || "unknown author";
+  let pages = form.elements["pages"].value || "Unknown number of ";
   let read = form.elements["status"].value === "yes" ? true : false;
 
   addBookToLibrary(title, author, pages, read);
   displayLibrary();
 
+  form.reset();
+  dialog.close();
+});
+
+const cancelBtn = document.getElementById("cancelBtn");
+
+cancelBtn.addEventListener("click", () => {
   form.reset();
   dialog.close();
 });
