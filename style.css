@@ -98,8 +98,26 @@ h1 {
   margin-bottom: 16px;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+button {
+  height: 2.5rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border: 1px solid var(--gray-950);
+  border-radius: 8px;
+}
+
 .content-wrapper {
   width: 65rem;
+}
+
+.open-btn {
+  margin-bottom: 16px;
 }
 
 /* Booklist */
@@ -123,12 +141,6 @@ h1 {
   padding: 24px;
 }
 
-.book__title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 4px;
-}
-
 .book__author {
   font-size: 1rem;
   font-weight: 800;
@@ -147,4 +159,59 @@ h1 {
 .attribution {
   font-size: 0.75rem; /* 0.75 * 16px = 12px */
   text-align: center;
+}
+
+/*  New Book Modal */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 30rem;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: hidden;
+  border: 1px solid var(--gray-950);
+  border-radius: 20px;
+  box-shadow: 8px 8px var(--gray-950);
+  padding: 24px;
+}
+
+.modal::backdrop {
+  background-color: var(--yellow);
+  opacity: 0.9;
+}
+
+.modal label {
+  font-weight: 800;
+}
+
+.form-field {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin: 4px 0 16px;
+}
+
+.field-set {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.field-set label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+}
+
+.submit-btn {
+  background-color: var(--yellow);
 }

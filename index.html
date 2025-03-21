@@ -10,35 +10,7 @@
     <main>
       <div class="content-wrapper">
         <h1>Odin Library</h1>
-        <dialog id="dialog" aria-labelledby="dialog-heading">
-          <h2 id="dialog-heading">Add book to library</h2>
-          <form id="bookForm">
-            <div>
-              <label for="title">Title:</label>
-              <input type="text" name="title" id="title" required />
-            </div>
-            <div>
-              <label for="author">Author</label>
-              <input type="text" name="author" id="author" />
-            </div>
-            <div>
-              <label for="pages">Number of pages:</label>
-              <input type="number" name="pages" id="pages" />
-            </div>
-            <fieldset>
-              <legend>Status:</legend>
-              <input type="radio" name="status" id="read" value="yes" checked />
-              <label for="read">Read</label>
-              <input type="radio" name="status" id="notRead" value="no" />
-              <label for="notRead">Not read yet</label>
-            </fieldset>
-            <div>
-              <button type="submit">Submit</button>
-              <button type="button" id="cancelBtn">Cancel</button>
-            </div>
-          </form>
-        </dialog>
-        <button id="modal">New Book</button>
+        <button class="open-btn" id="modal">Add Book</button>
         <div id="container">
           <!-- Book list goes here-->
         </div>
@@ -49,6 +21,44 @@
       <a href="https://www.theodinproject.com/">The Odin Project</a>. Coded by
       <a href="https://github.com/SabineEmden">Sabine Emden</a>.
     </footer>
+    <dialog id="dialog" class="modal" aria-labelledby="dialog-heading">
+      <form id="bookForm">
+        <h2 id="dialog-heading">Add a New Book</h2>
+        
+          <label for="title"
+            >Title:
+            <input
+              class="form-field"
+              type="text"
+              name="title"
+              id="title"
+              required
+            />
+          </label>
+          <label for="author"
+            >Author:
+            <input class="form-field" type="text" name="author" id="author" />
+          </label>
+          <label for="pages"
+            >Number of pages:
+            <input class="form-field" type="number" name="pages" id="pages" />
+          </label>
+          <fieldset class="field-set">
+            <legend>Status:</legend>
+            <label for="read">
+              <input type="radio" name="status" id="read" value="yes" checked />
+              Read</label>
+            <label for="notRead">
+              <input type="radio" name="status" id="notRead" value="no" />
+              Not read yet</label>
+          </fieldset>
+        </div>
+        <div class="buttons">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </dialog>
     <script src="./script.js"></script>
   </body>
 </html>
